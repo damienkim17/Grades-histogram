@@ -1,0 +1,170 @@
+body {
+    font-family: monospace, Arial, sans-serif;
+    background-color: #f7f5e6;
+    margin: 2%;
+    max-width: 100%;
+}
+
+.header {
+    background-color: #333a56;
+    color:  #f7f5e6;
+    font-size: 18pt;
+    padding: 0.5% 2.5%;
+    margin-bottom: 1%;
+}
+
+.upload {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 1%;
+    gap: 1%;
+}
+
+input[type=text] {
+    display: inline-block;
+    border: 1px solid black;
+    border-radius: 2px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.left {
+    background-color: #52658f;
+    padding: 1%;
+    color: #f7f5e6;
+}
+
+.bounds {
+    border-spacing: 25px;
+    margin-top: 15px;
+    margin-bottom: 5%;
+    padding-right: 33px;
+}
+
+caption {
+    font-size: 18pt;
+    font-weight: bold;
+    text-align: center;
+}
+
+th {
+    font-size: 14pt;
+    text-align: left;
+    padding-top: 2px;
+    padding-left: 30px;
+}
+
+.histogram {
+    background-color: #e8e8e8;
+    display: flex;
+    flex-direction: column;
+    flex: 4;
+    margin-left: 1%;
+    width: 100%;
+    height: 100%;
+    padding: 1%;
+}
+
+.histogram h1 {
+    margin-top: 1%;
+    font-size: 20pt;
+    color: #333a56;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: underline;
+}
+
+canvas {
+    object-fit: contain;
+    width: 100%;
+    margin-left: 10px;
+    margin-right: 100px;
+}
+
+.stats{
+    margin: auto;
+}
+
+.stats caption {
+    font-size: 20pt;
+    text-align: center;
+    text-decoration: underline;
+    margin-bottom: 2%;
+}
+
+.stats table {
+    white-space: nowrap;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    padding-left: 2%;
+    font-size: 14pt;
+    color: #333a56;
+}
+
+.stats th {
+    text-align: center;
+}
+
+.stats td {
+    max-width: 100%; 
+    padding-right: 30px;
+}
+
+.error {
+    display: none;
+    border: 2px solid #e84e4f;
+    background-color: #9c2b2e;
+    color:  #f7f5e6;
+    padding: 7px;
+    border-radius: 5px;
+}
+
+.button {
+    display: flex;
+    padding: 8px 10px;
+    margin: 0 auto;
+    font-size: 12pt;
+    border: 2px solid #f7f5e6;
+    border-radius: 4px;
+    color: #FFFFFF;
+    background-color: #52658f;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.button:hover, .customUpload:hover {
+    color: #000000;
+    background-color: #f7f5e6;
+}
+
+#fileInput {
+    display: none;
+}
+
+.customUpload {
+    float: left;
+    padding: 8px 10px;
+    border: 2px solid #f7f5e6;
+    border-radius: 4px;
+    color: #FFFFFF;
+    background-color: #333a56;
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1260px) {
+    .left {
+        width: 100%;
+    }
+    .bounds {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

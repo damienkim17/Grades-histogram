@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Histogram Generator</title>
+    <link rel="stylesheet" href="histogram.css">
+    <script type="text/javascript" src="calculate.js"></script>
+</head>
+<body onload="init()">
+    <section class="header">
+        <h1>Histogram Generator</h1>
+        <section class="upload">
+            <label for="fileInput" class="customUpload">
+                Upload
+            </label>
+            <input id="fileInput" type="file" name="file"/>
+            <pre id="fileContent"></pre>
+            <p class="error"></p>
+        </section>
+        
+    </section>
+    <section class="container">
+        <section class="left">
+            <table class="bounds">
+                <caption>Lower Bounds</caption>
+                
+                <tr>
+                    <th>Max</th>
+                    <td>
+                        <input type="text" onChange="handleChange()" class="score" value="100.00" maxlength="6" size="3" />
+                        
+                    </td>
+                </tr>
+                <tr>
+                    <th>A+</th>
+                    <td>
+                        <input type="text" onChange="handleChange()" class="score" value="95.00" maxlength="5" size="3"/>
+                    </td>
+                </tr>
+                <tr>
+                    <th>A</th>
+                    <td>
+                        <input type="text" onChange="handleChange()" class="score" value="90.00" maxlength="5" size="3"/>
+                    </td>
+                </tr>
+                <tr>
+                    <th>A-</th>
+                    <td>
+                        <input type="text" onChange="handleChange()" class="score" value="85.00" maxlength="5" size="3"/>
+                    </td>
+                </tr>
+                <tr>
+                    <th>B+</th>
+                    <td>
+                        <input type="text" onChange="handleChange()" class="score" value="80.00" maxlength="5" size="3"/>
+                    </td>
+                </tr>
+                <tr>
+                    <th>B</th>
+                    <td>
+                        <input type="text" onChange="handleChange()" class="score" value="75.00" maxlength="5" size="3"/>
+                    </td>
+                </tr>
+                <tr>
+                    <th>B-</th>
+                    <td>
+                        <input type="text" onChange="handleChange()" class="score" value="70.00" maxlength="5" size="3"/>
+                    </td>
+                </tr>
+                <tr>
+                    <th>C+</th>
+                    <td>
+                        <input type="text" onChange="handleChange()" class="score" value="65.00" maxlength="5" size="3"/>
+                    </td>
+                </tr>
+                <tr>
+                    <th>C</th>
+                    <td>
+                        <input type="text" onChange="handleChange()" class="score" value="60.00" maxlength="5" size="3"/>
+                    </td>
+                </tr>
+                <tr>
+                    <th>C-</th>
+                    <td>
+                        <input type="text" onChange="handleChange()" class="score" value="55.00" maxlength="5" size="3"/>
+                    </td>
+                </tr>
+                <tr>
+                    <th>D</th>
+                    <td>
+                        <input type="text" onChange="handleChange()" class="score" value="50.00" maxlength="5" size="3"/>
+                    </td>
+                </tr>
+                <tr>
+                    <th>F</th>
+                    <td>
+                        <input type="text" onChange="handleChange()" class="score" value="0.00" maxlength="5" size="3"/>
+                    </td>
+                </tr>
+            </table>
+            <button class="button" onclick="reset()">Reset Bounds</button>
+            <br>
+            <p class="error"></p>
+        </section>
+        <section class="histogram">
+            <h1>Grade Distribution</h1>
+            <canvas id="graph" height="600" width="1600"></canvas>
+            <section class="stats">
+                <table>
+                    <caption>Statistics</caption>
+                    <tr>
+                        <th>Highest:</th>
+                        <td id="high"></td>
+                        <th>Lowest:</th>
+                        <td id="low"></td>
+                        <th>Mean:</th>
+                        <td id="mean"></td>
+                        <th>Median:</th>
+                        <td id="median"></td>
+                    </tr>
+                </table>
+            </section>
+        </section>
+    </section>
+</body>
+</html>
